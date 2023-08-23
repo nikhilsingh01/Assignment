@@ -1,0 +1,10 @@
+.nav-bar.nav-item{
+    display: block;
+    margin-left: 0px;
+    color: blueviolet;
+}
+.nav-item ul li {
+    margin: 30px;
+    
+}
+

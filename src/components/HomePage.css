@@ -1,0 +1,16 @@
+.cardd{
+    display: flex;
+    flex-direction: row;
+}
+.card1{
+    width: 70%;
+    margin-left: 90px;
+}
+.header1{
+    display:flex;
+    flex-direction: row;
+}
+.id-1{
+    margin-left: 500px;
+}
+

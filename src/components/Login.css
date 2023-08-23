@@ -1,0 +1,43 @@
+.container{
+    border: 2px solid rgb(17, 16, 16);
+        margin: 108px 484px;
+        padding: 40px;
+        width: 33%;
+        border-radius: 28px;
+        
+}
+.container h1{
+    text-align: center;
+}
+.btn {
+    margin-top: 20px;
+}
+.forgot{
+    display: inline-block;
+    margin-left: 120px;
+}
+.create{
+    text-decoration: none;
+}
+.create-account{
+    text-align: center;
+}
+.password-input {
+    /* Your existing styles for the container */
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    top: 5px; /* Adjust this value to position the icon as needed */
+    right: 8px; /* Adjust this value to position the icon as needed */
+    cursor: pointer;
+    /* Other styles for the icon */
+  }
+  .ast{
+    color: red;
+  }
+  
