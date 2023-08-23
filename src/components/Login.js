@@ -83,6 +83,22 @@ function Login() {
             >
               Email ID<span className="ast">*</span>
             </label>
+            {emailFormatError && (
+              <div
+                className="error-message red-text"
+                style={{ display: "flex", textAlign: "left", color: "red" }}
+              >
+                Incorrect email format
+              </div>
+            )}
+            {emailregisterederror && (
+              <div
+                className="error-message red-text"
+                style={{ display: "flex", textAlign: "left", color: "red" }}
+              >
+                Email not Registered
+              </div>
+            )}
             <input
               type="email"
               className={`form-control ${invalidInput && "is-invalid"} ${
@@ -93,14 +109,6 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {emailFormatError && (
-              <div className="error-message red-text">
-                Incorrect email format
-              </div>
-            )}
-            {emailregisterederror && (
-              <div className="error-message red-text">Email not Registered</div>
-            )}
           </div>
         </div>
         <div className="form-group">
@@ -111,31 +119,36 @@ function Login() {
           >
             Password<span className="ast">*</span>
           </label>
-          <div className={`password-input ${invalidInput && "invalid"}`}>
-            <div className="password-wrapper">
-              <input
-                type={showPassword ? "text" : "password"}
-                id="inputPassword5"
-                className={`form-control ${invalidInput && "is-invalid"} ${
-                  passwordError && "is-invalid"
-                }`}
-                aria-describedby="passwordHelpBlock"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <span
-                className={`toggle-password ${showPassword ? "visible" : ""}`}
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <VisibilityOff /> : <Visibility />}
-              </span>
+          {passwordError && (
+            <div
+              className="error-message red-text"
+              style={{ display: "flex", textAlign: "left", color: "red" }}
+            >
+              Your password is incorrect.
             </div>
-          </div>
-
-          {invalidInput && passwordError && (
-            <div className="error-message red-text">Incorrect password</div>
           )}
         </div>
+        <div className={`password-input ${invalidInput && "invalid"}`}>
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              id="inputPassword5"
+              className={`form-control ${invalidInput && "is-invalid"} ${
+                passwordError && "is-invalid"
+              }`}
+              aria-describedby="passwordHelpBlock"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span
+              className={`toggle-password ${showPassword ? "visible" : ""}`}
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <VisibilityOff /> : <Visibility />}
+            </span>
+          </div>
+        </div>
+
         <div className="form-check">
           <input className="form-check-input" type="checkbox" id="gridCheck" />
           <label className="form-check-label" htmlFor="gridCheck">
